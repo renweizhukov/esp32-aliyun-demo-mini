@@ -1,3 +1,9 @@
+# Compiler config file
+sdkconfig*
+
+# Build output
+build/*
+
 # Prerequisites
 *.d
 
