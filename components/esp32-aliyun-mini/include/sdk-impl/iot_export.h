@@ -83,10 +83,6 @@ int     IOT_SetupConnInfo(const char *product_key,
 
 #include "exports/iot_export_errno.h"
 #include "exports/iot_export_mqtt.h"
-//#include "exports/iot_export_shadow.h"
-//#include "exports/iot_export_coap.h"
-//#include "exports/iot_export_ota.h"
-//#include "exports/iot_export_http.h"
 
 #if defined(__cplusplus)
 }

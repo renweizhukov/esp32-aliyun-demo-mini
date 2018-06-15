@@ -1,7 +1,7 @@
 esp32-aliyun-demo-mini
 ======================
 
-Based on [esp32-aliyun-demo](https://github.com/espressif/esp32-aliyun-demo), to reduce the binary size (i.e., libmain.a and main.bin), we extract the dependencies of mqtt-example from the library esp32-aliyun and compile them with mqtt-example together.
+Based on [esp32-aliyun-demo](https://github.com/espressif/esp32-aliyun-demo), to reduce the binary size (i.e., libmain.a and main.bin), we extract the dependencies of mqtt-example from the library esp32-aliyun, compile them into a library, and then link the library to the demo program `mqtt-example`.
 
 # 1. Set up the development environment on Ubuntu 16.04LTS.
 
@@ -79,6 +79,7 @@ Set the following macro values according to your IoT product in `main/src/mqtt_e
 ```bash
 $ make
 $ xtensa-esp32-elf-strip --strip-unneeded build/main/libmain.a
+$ xtensa-esp32-elf-strip --strip-unneeded build/esp32-aliyun-mini/libesp32-aliyun-mini.a
 $ make
 ```
 

@@ -20,6 +20,7 @@ PROJECT_NAME := main
 # ------------------------------------------------------------------
 #
 
+# Disable debug logging.
 #CFLAGS += -D IOTX_DEBUG
 
 CFLAGS += -D MQTT_COMM_ENABLED
@@ -30,6 +31,6 @@ CFLAGS += -D COAP_DTLS_SUPPORT
 
 CFLAGS += -D MQTT_DIRECT
 
-COMPONENT_ADD_INCLUDEDIRS := components/esp32-aliyun/platform/os/include
+COMPONENT_ADD_INCLUDEDIRS := components/esp32-aliyun-mini/include/sdk-impl
 
 include $(IDF_PATH)/make/project.mk

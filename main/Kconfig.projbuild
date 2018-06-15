@@ -27,17 +27,10 @@ choice M_MQTT_EXAMPLE
 
 config M_MQTT_EXAMPLE
     bool "mqtt-example"
-config M_OTA_MQTT_EXAMPLE
-    bool "ota-mqtt-example"
 endchoice
 
 config MQTT_EXAMPLE
     int 
     default 1 if M_MQTT_EXAMPLE
-    default 0 if M_OTA_MQTT_EXAMPLE
-config OTA_MQTT_EXAMPLE
-    int
-    default 1 if M_OTA_MQTT_EXAMPLE
-    default 0 if M_MQTT_EXAMPLE
 
 endmenu
